@@ -74,10 +74,10 @@ class PersonController extends Controller
             'first_name'  => 'required',
             'last_name'   => 'required',
             'phone'       => 'required',
-            'email'       => 'required'
-            //'city'        => 'required'
+            'email'       => 'required',
+            'city'        => 'required'
         ]);
-        
+
         $person -> insert($request->all());
 
         return new PersonResource($person);
